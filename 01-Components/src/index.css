@@ -1,0 +1,25 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  color: aliceblue;
+}
+html,body{
+  height: 100%;
+  width: 100%;
+}
+body{
+  background: #111;
+}
+.card{
+  background-color: brown;
+  padding:20px;
+  margin:10px;
+  border-radius: 20px;
+}
+.nav{
+  height:50px;
+  background-color: cadetblue;
+  padding:20px;
+  margin:5px;
+}
