@@ -1,0 +1,8 @@
+.btn{
+    background-color: cadetblue;
+    width:max-content;
+    padding:10px;
+    margin:10px 0 10px 20px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+}
