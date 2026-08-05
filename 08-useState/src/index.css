@@ -1,0 +1,10 @@
+h1{
+    background-color: #333;
+    padding:20px 70px;
+    width: max-content;
+    border-radius: 30px;
+    font-size:3rem;
+}
+button{
+    margin-right:20px;
+}
