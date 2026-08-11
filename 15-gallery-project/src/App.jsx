@@ -4,11 +4,11 @@ import { useEffect, useState } from 'react'
 const App = () => {
 
 const [userData, setUserData] = useState([])
-
+const [index, setIndex] = useState(1)
 
 const getData=async()=>{
   const response =await axios.get(
-    'https://picsum.photos/v2/list?page=8&limit=30')
+    `https://picsum.photos/v2/list?page=${index}&limit=34`)
 
   // console.log(response.data)
   setUserData(response.data)
@@ -18,7 +18,7 @@ let printData = 'No data here'
 
 useEffect(()=>{
   getData()
-},[])
+},[index])
 
 if(userData.length>0){
   printData = userData.map((elem,indx)=>{
@@ -35,7 +35,24 @@ if(userData.length>0){
 }
   return (
     <div className='bg-black h-screen overflow-auto text-white p-4 '>
-      <h1 className='flex flex-wrap gap-5'>{printData}</h1>
+      <h1 className='text-9xl fixed'>{index}</h1>
+      <h1 className='flex flex-wrap justify-center gap-5 py-6'>{printData}</h1>
+
+    <div className='flex gap-5 justify-center'>
+      <button className='bg-orange-400 px-4 py-2 text-black font-bold text-xl rounded'
+      onClick={()=>{
+        if(index>1){
+          setIndex(index-1)
+        }
+      }}
+      >Prev</button>
+      <button className='bg-orange-400 px-4 py-2 text-black font-bold text-xl rounded'
+      onClick={()=>{
+        setIndex(index+1)
+      }}
+      >Next</button>
+    </div>
+
     </div>
   )
 }
