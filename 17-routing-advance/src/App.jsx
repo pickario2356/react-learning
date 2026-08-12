@@ -4,6 +4,7 @@ import Footer from './components/Footer'
 import Home from './pages/Home'
 import About from './pages/About'
 import Contact from './pages/Contact'
+import Kids from './pages/Kids'
 
 import { Route, Routes } from 'react-router-dom'
 import NotFound from './pages/NotFound'
@@ -17,10 +18,15 @@ const App = () => {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/about' element={<About />} />
-          <Route path='/contact' element={<Contact />} />
+          {/* <Route path='/contact' element={<Contact />} />
           <Route path='/contact/men' element={<Men />} />
-          <Route path='/contact/women' element={<Women />} />
+          <Route path='/contact/women' element={<Women />} /> */}
 
+          <Route path='/contact' element={<Contact />}>
+            <Route path='men' element={<Men />} />
+            <Route path='women' element={<Women />} />
+            <Route path='kiddo' element={<Kids/>} />
+          </Route>
 
           <Route path='*' element={<NotFound />} />
         </Routes>
