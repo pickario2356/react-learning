@@ -1,0 +1,27 @@
+*{
+    color:#fff;
+    text-decoration: none;
+}
+body{
+    background: #111;
+}
+h1{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    font-size: xx-large ;
+    white-space: nowrap;
+}
+.nav{
+    border-radius: 2rem;
+    padding:10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #919191;
+}
+.nav div{
+    display: flex;
+    gap:30px;
+}
