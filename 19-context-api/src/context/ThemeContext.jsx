@@ -1,17 +1,16 @@
-import React from 'react'
-import { createContext } from 'react'
+import React from "react";
+import { createContext } from "react";
 
+export const ThemeDataContext = createContext();
 
-export const ThemeDataContext = createContext()
-
-const ThemeContext = ({children}) => {
+const ThemeContext = ({ children }) => {
   return (
     <div>
-      <ThemeDataContext.Provider value='Roxy'>
+      <ThemeDataContext.Provider value="Roxy">
         {children}
       </ThemeDataContext.Provider>
     </div>
-  )
-}
+  );
+};
 
-export default ThemeContext
+export default ThemeContext;
